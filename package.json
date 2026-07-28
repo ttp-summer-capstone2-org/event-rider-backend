@@ -2,9 +2,10 @@
   "name": "event-rider-backend",
   "version": "1.0.0",
   "description": "This is a backend repository for event-rider capstone",
-  "main": "index.js",
+  "main": "models/index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon models/index.js",
+    "dev": "nodemon models/index.js"
   },
   "repository": {
     "type": "git",
