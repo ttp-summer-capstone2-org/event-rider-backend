@@ -1,0 +1,27 @@
+{
+  "name": "event-rider-backend",
+  "version": "1.0.0",
+  "description": "This is a backend repository for event-rider capstone",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttp-summer-capstone2-org/event-rider-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ttp-summer-capstone2-org/event-rider-backend/issues"
+  },
+  "homepage": "https://github.com/ttp-summer-capstone2-org/event-rider-backend#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
