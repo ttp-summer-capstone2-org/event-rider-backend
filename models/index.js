@@ -1,9 +1,11 @@
 import dbConnection from "../data/db.js";
-import Driver from "./driverModel.js";
-import Ticket from "./ticketModel.js";
-import User from "./userModel.js";
+import Drivers from "./driverModel.js";
+import Tickets from "./ticketModel.js";
+import Rides from "./rideModel.js";
+import Users from "./userModel.js";
 
 
 
 
-export { dbConnection, Driver, Ticket, User};
+export { dbConnection, Drivers, Tickets, Users, Rides };
+

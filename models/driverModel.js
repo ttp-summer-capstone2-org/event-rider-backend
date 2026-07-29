@@ -1,7 +1,7 @@
 import dbConnection from "../data/db.js";
 import { DataTypes } from "sequelize";
 
-const Driver = dbConnection.define("driver", {
+const Drivers = dbConnection.define("driver", {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -16,4 +16,4 @@ const Driver = dbConnection.define("driver", {
     }
 })
 
-export default Driver;
+export default Drivers;
