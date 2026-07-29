@@ -36,7 +36,7 @@ dbConnection.sync()
   .then(() => {
     console.log('Database connected');
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Server listening on port ${PORT}`);
+      console.log(`Server listening on port http://localhost:${PORT}`);
     });
   })
   .catch((err) => {
