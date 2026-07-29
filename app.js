@@ -1,5 +1,5 @@
 import express from 'express';
-import {Ticket, dbConnection, Driver} from './models/index.js'
+import {Ticket, dbConnection, Driver, User} from './models/index.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
