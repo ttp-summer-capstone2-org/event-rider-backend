@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const event = await Events.findByPk(req.params.id);
   if (!event) return res.status(404).json({ error: 'Event not found' });
-  
+
   res.json(event);
 }
 );
@@ -45,5 +45,6 @@ router.delete('/:id', async (req, res) => {
   await event.destroy();
   res.status(204).send();
 });
+
 
 export default router;

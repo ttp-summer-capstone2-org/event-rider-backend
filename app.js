@@ -2,7 +2,7 @@ import express from 'express';
 import {Tickets, dbConnection, Drivers, Users, Rides, Events} from './models/index.js'
 import eventRoutes from './routes/eventRoutes.js';
 import userRoutes from './routes/userRoutes.js';
-
+import driverRoutes from './routes/driverRoutes.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,7 +31,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/events', eventRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/drivers',driverRoutes);
 dbConnection.sync()
   .then(() => {
     console.log('Database connected');
