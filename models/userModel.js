@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import dbConnection from "../data/db.js";
 
-const User = dbConnection.define('User', {
+const Users = dbConnection.define('User', {
     name: {
         type: DataTypes.STRING,
         allowNull:false,
@@ -21,4 +21,4 @@ const User = dbConnection.define('User', {
     }
 });
 
-export default User;
+export default Users;
