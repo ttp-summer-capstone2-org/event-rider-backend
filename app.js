@@ -1,4 +1,5 @@
 import express from 'express';
+import {Ticket, dbConnection, Driver} from './models/index.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,10 +24,18 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is reachable' });
 });
 
+dbConnection.sync()
+  .then(() => {
+    console.log('Database connected');
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server listening on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Failed to connect to databse:', err);
+  });
 
 
 
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+
