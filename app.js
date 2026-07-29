@@ -1,5 +1,5 @@
 import express from 'express';
-import {Tickets, dbConnection, Drivers, Users, Rides} from './models/index.js'
+import {Tickets, dbConnection, Drivers, Users, Rides, Events} from './models/index.js'
 
 
 const app = express();
