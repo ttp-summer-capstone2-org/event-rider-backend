@@ -23,6 +23,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is reachable' });
 });
 
+
+
+
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server listening on port ${PORT}`);
 });
