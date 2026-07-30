@@ -2,7 +2,10 @@ import express from 'express';
 import {Tickets, dbConnection, Drivers, Users, Rides, Events} from './models/index.js'
 import eventRoutes from './routes/eventRoutes.js';
 import userRoutes from './routes/userRoutes.js';
-
+import driverRoutes from './routes/driverRoutes.js'
+import rideRoutes from './routes/rideRoutes.js'
+import ticketRoutes from './routes/ticketRoutes.js'
+import authRoutes from './routes/authRoutes.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,9 +32,12 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is reachable' });
 });
 
+app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/drivers',driverRoutes);
+app.use('/api/rides',rideRoutes);
+app.use('/api/tickets',ticketRoutes);
 dbConnection.sync()
   .then(() => {
     console.log('Database connected');
